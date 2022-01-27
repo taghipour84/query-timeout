@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# query-timeout
-=======
 # query-timeout
 ### 1- Clone the repository:
 git clone https://github.com/taghipour84/query-timeout.git
