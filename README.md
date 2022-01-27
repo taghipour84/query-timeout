@@ -1,5 +1,5 @@
 # query-timeout
-test query timeout 
+test query timeout project
 ### 1- Clone the repository:
 git clone https://github.com/taghipour84/query-timeout.git
 ### 2- Build the maven project:
