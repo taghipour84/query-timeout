@@ -6,6 +6,6 @@ mvn clean install -DskipTests=true
 ### 3- Running the containers:
 docker-compose up
 ### 4- Run the app:
-go to http://localhost:8080
+go to http://localhost:8080 and refresh several times
 ### 5- Stop containers:
 docker-compose down
