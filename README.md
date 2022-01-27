@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # query-timeout
 =======
 # query-timeout
