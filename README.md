@@ -7,5 +7,7 @@ git clone https://github.com/taghipour84/query-timeout.git
 mvn clean install -DskipTests=true
 ### 3- Running the containers:
 docker-compose up
-### 4- Stop containers:
+### 4- Run app
+go to http://localhost:8080
+### 5- Stop containers:
 docker-compose down
