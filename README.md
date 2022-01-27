@@ -1,1 +1,11 @@
 # query-timeout
+=======
+# query-timeout
+### 1- Clone the repository:
+git clone https://github.com/taghipour84/query-timeout.git
+### 2- Build the maven project:
+mvn clean install -DskipTests=true
+### 3- Running the containers:
+docker-compose up
+### 4- Stop containers:
+docker-compose down
