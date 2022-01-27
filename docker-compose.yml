@@ -1,0 +1,43 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+version: '3.8'
+networks:
+  backend:
+    name: app
+    driver: bridge
+volumes:
+  postgres_data:
+    driver: local
+
+services:
+  app:
+    image: query-timeout:latest
+    container_name: web-app
+    ports:
+      - "8080:8080"
+    networks:
+      - backend
+    depends_on:
+      - db
+
+  db:
+    image: postgres:12
+    container_name: postgres-db
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - backend
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: query-timeout
+      PGDATA: /var/lib/postgresql/data/pgdata
+    # Service health check
+    healthcheck:
+      test: pg_isready -U postgres
+      interval: 1m
+      timeout: 10s
+      retries: 2
+
